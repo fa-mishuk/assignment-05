@@ -9,6 +9,11 @@ document.getElementById("history-btn").addEventListener('click', function () {
 })
 
 
+document.getElementById("logo-btn").addEventListener('click', function(e) {
+    e.preventDefault()
+    window.location.href = 'home.html'
+})
+
 // donate1 function start
 document.getElementById('donate1').addEventListener('click', function (event) {
     event.preventDefault();
