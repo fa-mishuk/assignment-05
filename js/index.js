@@ -1,19 +1,17 @@
 document.getElementById("donate-btn").addEventListener('click', function (event) {
     event.preventDefault();
-    document.getElementById('donate-btn').classList.add('bg-[#B4F461]');
-    document.getElementById('donate-btn').classList.remove('btn');
-    document.getElementById('history-btn').classList.remove('bg-[#B4F461]');
-    document.getElementById('history-btn').classList.add('btn');
-    document.getElementById('donate-card').classList.remove('hidden')
+
+    showColorById("donate-btn")
+    showColorById("history-btn")
+    showColorById("donate-card")
 })
 
 
 document.getElementById("history-btn").addEventListener('click', function () {
-    document.getElementById('history-btn').classList.add('bg-[#B4F461]');
-    document.getElementById('history-btn').classList.remove('btn');
-    document.getElementById('donate-btn').classList.remove('bg-[#B4F461]');
-    document.getElementById('donate-btn').classList.add('btn');
-    document.getElementById('donate-card').classList.add('hidden')
+
+    showColorByIdd("history-btn")
+    showColorByIdd("donate-btn")
+    showColorByIdd("donate-card")
 })
 
 
