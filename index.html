@@ -74,7 +74,7 @@
                         <img class="w-7 h-7 bg-" src="assets/coin.png" alt="pic">
                         <p class="text-[#111111B3]"><span id="balance1" class="donate-amount">10000</span> BDT</p>
                     </div>
-                    <p class="py-4 text-xl font-bold text-black">Donate for Flood at Noakhali, Bangladesh</p>
+                    <p id="donate-p1" class="py-4 text-xl font-bold text-black">Donate for Flood at Noakhali, Bangladesh</p>
                     <p class="text-[#111111B3] leading-7 lg:text-xl"> The recent floods in Noakhali have caused
                         significant damage to homes infrastructure. Your donation will help provide essential supplies
                         and to those affected by this disaster. Every contribution, big or small, makes difference.
@@ -95,7 +95,7 @@
                         <img class="w-7 h-7 bg-" src="assets/coin.png" alt="pic">
                         <p class="text-[#111111B3]"><span id="balance2" class="donate-amount">15000</span> BDT</p>
                     </div>
-                    <p class="py-4 text-xl font-bold text-black">Donate for Flood Relief in Feni,Bangladesh</p>
+                    <p id="donate-p1" class="py-4 text-xl font-bold text-black">Donate for Flood Relief in Feni,Bangladesh</p>
                     <p class="text-[#111111B3] leading-7 lg:text-xl">The recent floods in Feni have devastated local
                         communities, leading to severe disruption and loss. Your generous donation will help provide
                         immediate aid, including food, clean water, and medical supplies, to those affected by this
@@ -117,7 +117,7 @@
                         <img class="w-7 h-7 bg-" src="assets/coin.png" alt="pic">
                         <p class="text-[#111111B3]"><span id="balance3" class="donate-amount">30000</span> BDT</p>
                     </div>
-                    <p class="py-4 text-xl font-bold text-black">Aid for Injured in the Quota Movement</p>
+                    <p id="donate-p2" class="py-4 text-xl font-bold text-black">Aid for Injured in the Quota Movement</p>
                     <p class="text-[#111111B3] leading-7 lg:text-xl">The recent Quota movement has resulted in numerous
                         injuries and significant hardship for many individuals. Your support is crucial in providing
                         medical assistance, rehabilitation, and necessary supplies to those affected. By contributing,
@@ -136,15 +136,16 @@
     <!-- donate section end -->
 
     <!-- main section end -->
+     
 
-    <!-- ----------------------------- -->
-    <div class="grid gap-4 p-8 border mx-7 md:mx-24 lg:mx-24 rounded-xl">
-        <p class="font-bold lg:text-xl"><span>96500 Taka is</span> Donated for famine-2024 at Feni, Bangladesh</p>
-        <p class="text-[#111111B3] text-sm lg:text-[16px]">Date : Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh
-            Standard Time)</p>
+    <!-- Dynamic history Part start -->
+    <div id="history-container" class="hidden">
+        
     </div>
+    <!-- Dynamic history Part end -->
 
 
+    <!-- Modal part start -->
     <button class="hidden btn" onclick="my_modal_2.showModal()">open modal</button>
     <dialog id="my_modal_2" class="modal">
         <div class="justify-center text-center modal-box">
@@ -155,7 +156,7 @@
             <button id="close-btn" class="mb-2 btn">Close Confirmation</button>
         </div>
     </dialog>
-    <!-- ----------------------------- -->
+    <!-- Modal part end -->
 
     <script src="js/utility.js"></script>
     <script src="js/index.js"></script>
