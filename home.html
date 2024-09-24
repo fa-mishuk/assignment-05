@@ -1,11 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/e2ab0df97b.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
 </head>
-<body>
-    <h1>Hello i am Mishuk</h1>
+
+  <style>
+    .lexend-uniquifier {
+        font-family: "Lexend", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+    }
+  </style>
+
+<body class="lexend-uniquifier">
+  <div class="navbar bg-[#F9F7F3FF] mb-16 md:mb-16 lg:mb-16 pb-4">
+    <div class="navbar md:mx-24 lg:mx-24 bg-[#F9F7F3FF]">
+      <div class="navbar-start">
+        <button id="logo-btn"
+          class="btn bg-[#B4F461] text-black rounded-xl lg:px-8 lg:pb-3 lg:pt-2 lg:text-xl font-semibold text-center">Blog</button>
+      </div>
+      <div class="navbar-center lg:flex">
+        <div class="items-center gap-1 md:gap-2 menu menu-horizontal lg:gap-6">
+          <img class="w-7 md:w-9 lg:w-12" src="assets/logo.png" alt="">
+          <p class="font-semibold text-black lg:text-xl">Donate Bangladesh</p>
+        </div>
+      </div>
+      <div class="navbar-end">
+        <div class="flex items-center gap-1 lg:gap-3">
+          <img src="assets/coin.png" alt="pic">
+          <p id="reserved-amount" class="font-medium text-sm lg:text-xl text-[#111111B3]">5500 BDT</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex gap-3 mb-5 mx-7 md:mx-20 lg:mx-28">
+    <p class="text-2xl font-bold lg:text-3xl text-blck">Important FAQ</p>
+    <i class="text-3xl fa-regular fa-circle-question"></i>
+  </div>
+
+  <div class="grid gap-5 mx-7 md:mx-20 lg:mx-28">
+    <div class="w-full join join-vertical">
+      <div class="border collapse collapse-arrow join-item border-base-300">
+        <input type="radio" name="my-accordion-4" checked="checked" />
+        <div class="text-lg font-semibold lg:text-xl collapse-title">What is the Document Object Model (DOM)?</div>
+        <div class="collapse-content">
+          <p>The Document Object Model (DOM) is a programming interface that allows dynamic manipulation of a webpage's
+            structure, content, and styling.</p>
+        </div>
+      </div>
+      <div class="border collapse collapse-arrow join-item border-base-300">
+        <input type="radio" name="my-accordion-4" />
+        <div class="text-lg font-semibold lg:text-xl collapse-title">How do you select an element from the DOM?</div>
+        <div class="collapse-content">
+          <p>
+            I select an element from the DOM using methods like document.getElementById(), document.querySelector(), or
+            document.getElementsByClassName().</p>
+        </div>
+      </div>
+      <div class="border collapse collapse-arrow join-item border-base-300">
+        <input type="radio" name="my-accordion-4" />
+        <div class="text-lg font-semibold lg:text-xl collapse-title">What is event delegation in the context of the DOM,
+          and why is it useful?</div>
+        <div class="collapse-content">
+          <p>Event delegation is a technique where a parent element handles events for its child elements using a single
+            event listener, improving performance and enabling dynamic content handling.</p>
+        </div>
+      </div>
+      <div class="border collapse collapse-arrow join-item border-base-300">
+        <input type="radio" name="my-accordion-4" />
+        <div class="text-lg font-semibold lg:text-xl collapse-title">How do you manipulate an element's, attributes and
+          style using the DOM?</div>
+        <div class="collapse-content">
+          <p>I manipulate an element's attributes using `setAttribute()` and its styles via the `style` property in the
+            DOM.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
+
 </html>

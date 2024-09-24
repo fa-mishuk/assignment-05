@@ -18,53 +18,61 @@
         font-optical-sizing: auto;
         font-style: normal;
     }
+    .blurred {
+        backdrop-filter: blur(30px);
+        transition: backdrop-filter 0.3s ease-in-out;
+    }
 </style>
 
 <body class="lexend-uniquifier">
     <!-- navbar section start -->
-    <div class="navbar bg-[#F9F7F3FF] mb-10 md:mb-16 lg:mb-20 pb-8">
-        <div class="navbar md:mx-24 lg:mx-24 bg-[#F9F7F3FF]">
-            <div class="navbar-start">
-                <button id="logo-btn"
-                    class="btn bg-[#B4F461] text-black rounded-xl lg:px-8 lg:pb-3 lg:pt-2 lg:text-xl font-semibold text-center">Blog</button>
-            </div>
-            <div class="navbar-center lg:flex">
-                <div class="items-center gap-1 md:gap-2 menu menu-horizontal lg:gap-6">
-                    <img class="w-7 md:w-9 lg:w-12" src="assets/logo.png" alt="">
-                    <p class="font-semibold text-black lg:text-xl">Donate Bangladesh</p>
+    <div id="nav-banner" class="sticky top-0 z-50">
+        <div id="nav-section" class="navbar bg-[#F9F7F3FF] mb-10 md:mb-16 lg:mb-16 pb-4">
+            <div class="navbar md:mx-24 lg:mx-24">
+                <div class="navbar-start">
+                    <button id="logo-btn"
+                        class="btn bg-[#B4F461] text-black rounded-xl lg:px-8 lg:pb-3 lg:pt-2 lg:text-xl font-semibold text-center">Blog</button>
                 </div>
-            </div>
-            <div class="navbar-end">
-                <div class="flex items-center gap-1 lg:gap-3">
-                    <img src="assets/coin.png" alt="pic">
-                    <p id="reserved-amount" class="font-medium text-sm lg:text-xl text-[#111111B3]">5500 BDT</p>
+                <div class="navbar-center lg:flex">
+                    <div class="items-center gap-1 md:gap-2 menu menu-horizontal lg:gap-6">
+                        <img class="w-7 md:w-9 lg:w-12" src="assets/logo.png" alt="">
+                        <p class="font-semibold text-black lg:text-xl">Donate Bangladesh</p>
+                    </div>
+                </div>
+                <div class="navbar-end">
+                    <div class="flex items-center gap-1 lg:gap-3">
+                        <img src="assets/coin.png" alt="pic">
+                        <p id="reserved-amount" class="font-medium text-sm lg:text-xl text-[#111111B3]">5500 BDT</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- navbar section end -->
-
-    <!-- main section satrt -->
-
-    <!-- banner button section start -->
-    <div class="flex justify-center gap-4 mb-8">
-        <button id="donate-btn"
-            class="px-4 font-semibold text-black outline-none btn lg:text-xl lg:px-8 rounded-xl">Donation</button>
-        <button id="history-btn"
-            class="px-4 font-semibold text-black btn lg:text-xl lg:px-8 rounded-xl">History</button>
+        <!-- navbar section end -->
+    
+        <!-- main section satrt -->
+    
+        <!-- banner button section start -->
+        <div class="flex justify-center gap-4 pb-8">
+            <button id="donate-btn"
+                class="px-4 font-semibold text-black outline-none btn lg:text-xl lg:px-8 rounded-xl">Donation</button>
+            <button id="history-btn"
+                class="px-4 font-semibold text-black btn lg:text-xl lg:px-8 rounded-xl">History</button>
+        </div>
     </div>
     <!-- banner button section end -->
 
+    <hr class="mb-10">
+
     <!-- donate section start -->
-    <div class="mb-10 mx-7 md:mx-24 lg:mx-24 lg:mb-20">
+    <div id="donate-card" class="hidden mb-10 donation-card mx-7 md:mx-24 lg:mx-24 lg:mb-20">
         <div class="grid gap-8">
             <div class="grid gap-8 p-8 border lg:flex rounded-xl">
                 <img class="" src="assets/noakhali.png" alt="pic">
                 <div>
                     <div
-                        class="md:mx-auto lg:mx-0 flex gap-2 w-[110px] h-[44px] items-center justify-center bg-[#1111110D] rounded-lg">
+                        class="md:mx-auto lg:mx-0 flex gap-2 w-[150px] h-[44px] items-center justify-center bg-[#1111110D] rounded-lg">
                         <img class="w-7 h-7 bg-" src="assets/coin.png" alt="pic">
-                        <p class="text-[#111111B3]"><span id="balance1" class="donate-amount">0</span> BDT</p>
+                        <p class="text-[#111111B3]"><span id="balance1" class="donate-amount">10000</span> BDT</p>
                     </div>
                     <p class="py-4 text-xl font-bold text-black">Donate for Flood at Noakhali, Bangladesh</p>
                     <p class="text-[#111111B3] leading-7 lg:text-xl"> The recent floods in Noakhali have caused
@@ -72,7 +80,7 @@
                         and to those affected by this disaster. Every contribution, big or small, makes difference.
                         Please join us in supporting the relief efforts and making a positive impact on the lives of
                         those in need.</p>
-                    <input id="donate-input1" type="number" placeholder="Write Donation Amount"
+                    <input id="donate-input1" type="text" placeholder="Write Donation Amount"
                         class="w-full mt-6 mb-4 input input-bordered" />
                     <button id="donate1" class="btn bg-[#B4F461] w-full text-black font-bold text-xl">Donate
                         Now</button>
@@ -83,9 +91,9 @@
                 <img src="assets/feni.png" alt="pic">
                 <div>
                     <div
-                        class="md:mx-auto lg:mx-0 flex gap-2 w-[110px] h-[44px] items-center justify-center bg-[#1111110D] rounded-lg">
+                        class="md:mx-auto lg:mx-0 flex gap-2 w-[150px] h-[44px] items-center justify-center bg-[#1111110D] rounded-lg">
                         <img class="w-7 h-7 bg-" src="assets/coin.png" alt="pic">
-                        <p class="text-[#111111B3]"><span id="balance2" class="donate-amount">0</span> BDT</p>
+                        <p class="text-[#111111B3]"><span id="balance2" class="donate-amount">15000</span> BDT</p>
                     </div>
                     <p class="py-4 text-xl font-bold text-black">Donate for Flood Relief in Feni,Bangladesh</p>
                     <p class="text-[#111111B3] leading-7 lg:text-xl">The recent floods in Feni have devastated local
@@ -94,7 +102,7 @@
                         calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this
                         disaster. Every contribution counts towards making a real difference. Please consider donating
                         today to assist those in urgent need.</p>
-                    <input id="donate-input2" type="number" placeholder="Write Donation Amount"
+                    <input id="donate-input2" type="text" placeholder="Write Donation Amount"
                         class="w-full mt-6 mb-4 input input-bordered" />
                     <button id="donate2" class="btn bg-[#B4F461] w-full text-black font-bold text-xl">Donate
                         Now</button>
@@ -105,9 +113,9 @@
                 <img src="assets/quota-protest.png" alt="pic">
                 <div>
                     <div
-                        class="md:mx-auto lg:mx-0 flex gap-2 w-[110px] h-[44px] items-center justify-center bg-[#1111110D] rounded-lg">
+                        class="md:mx-auto lg:mx-0 flex gap-2 w-[150px] h-[44px] items-center justify-center bg-[#1111110D] rounded-lg">
                         <img class="w-7 h-7 bg-" src="assets/coin.png" alt="pic">
-                        <p class="text-[#111111B3]"><span id="balance3" class="donate-amount">0</span> BDT</p>
+                        <p class="text-[#111111B3]"><span id="balance3" class="donate-amount">30000</span> BDT</p>
                     </div>
                     <p class="py-4 text-xl font-bold text-black">Aid for Injured in the Quota Movement</p>
                     <p class="text-[#111111B3] leading-7 lg:text-xl">The recent Quota movement has resulted in numerous
@@ -117,7 +125,7 @@
                         challenging time. Every donation plays a vital role in alleviating their suffering and aiding in
                         their recovery. Please consider making a donation to support these brave individuals in their
                         time of need.</p>
-                    <input id="donate-input3" type="number" placeholder="Write Donation Amount"
+                    <input id="donate-input3" type="text" placeholder="Write Donation Amount"
                         class="w-full mt-6 mb-4 input input-bordered" />
                     <button id="donate3" class="btn bg-[#B4F461] w-full text-black font-bold text-xl">Donate
                         Now</button>

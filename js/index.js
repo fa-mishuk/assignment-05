@@ -1,11 +1,19 @@
-document.getElementById("donate-btn").addEventListener('click', function () {
+document.getElementById("donate-btn").addEventListener('click', function (event) {
+    event.preventDefault();
     document.getElementById('donate-btn').classList.add('bg-[#B4F461]');
+    document.getElementById('donate-btn').classList.remove('btn');
     document.getElementById('history-btn').classList.remove('bg-[#B4F461]');
+    document.getElementById('history-btn').classList.add('btn');
+    document.getElementById('donate-card').classList.remove('hidden')
 })
+
 
 document.getElementById("history-btn").addEventListener('click', function () {
     document.getElementById('history-btn').classList.add('bg-[#B4F461]');
+    document.getElementById('history-btn').classList.remove('btn');
     document.getElementById('donate-btn').classList.remove('bg-[#B4F461]');
+    document.getElementById('donate-btn').classList.add('btn');
+    document.getElementById('donate-card').classList.add('hidden')
 })
 
 
@@ -13,6 +21,20 @@ document.getElementById("logo-btn").addEventListener('click', function(e) {
     e.preventDefault()
     window.location.href = 'home.html'
 })
+
+
+window.addEventListener('scroll', function() {
+    const navBanner = document.getElementById('nav-banner');
+    if (window.scrollY > 100) {
+        navBanner.classList.add('blurred');
+        document.getElementById('nav-section').classList.remove('bg-[#F9F7F3FF]');
+    } else {
+        navBanner.classList.remove('blurred');
+        document.getElementById('nav-section').classList.add('bg-[#F9F7F3FF]');
+    }
+});
+
+
 
 // donate1 function start
 document.getElementById('donate1').addEventListener('click', function (event) {
@@ -30,9 +52,9 @@ document.getElementById('donate1').addEventListener('click', function (event) {
 
         const reservedAmount = getDonateBalance("reserved-amount")
 
-        if (donatedBalance1 < reservedAmount) {
+        if (donateInput1 <= reservedAmount) {
             document.getElementById('balance1').innerText = donatedBalance1;
-            const reservedTotalAmount = reservedAmount - donatedBalance1;
+            const reservedTotalAmount = reservedAmount - donateInput1;
             document.getElementById('reserved-amount').innerText = reservedTotalAmount;
 
             modal.showModal();
@@ -41,13 +63,13 @@ document.getElementById('donate1').addEventListener('click', function (event) {
             });
         }
         else {
-            alert('Please add a limited amount')
+            alert('Invalid donate amount')
             return;
         }
 
 
     } else {
-        alert('Please add a minimum amount');
+        alert('Please add a valid amount');
         return;
     }
 })
@@ -55,42 +77,6 @@ document.getElementById('donate1').addEventListener('click', function (event) {
 
 
 // donate2 function start
-// document.getElementById('donate2').addEventListener('click', function (event) {
-//     event.preventDefault();
-
-//     const donateInput2 = getInputValueById("donate-input2");
-//     const modal = document.getElementById('my_modal_2');
-//     const closeBtn = document.getElementById('close-btn');
-
-//     if (!isNaN(donateInput2) && Number(donateInput2) > 0) {
-//         modal.showModal();
-
-//         const balance2 = getDonateBalance('balance2');
-
-//         const donatedBalance2 = balance2 + donateInput2;
-
-//         const reservedAmount = getDonateBalance("reserved-amount")
-
-//         if (donatedBalance2 < reservedAmount) {
-//             document.getElementById('balance2').innerText = donatedBalance2;
-//             const reservedTotalAmount = reservedAmount - donatedBalance2;
-//             document.getElementById('reserved-amount').innerText = reservedTotalAmount;
-
-//             modal.showModal();
-//             closeBtn.addEventListener('click', function () {
-//                 modal.close();
-//             });
-//         }
-//         else {
-//             alert('Please add a limited amount')
-//             return;
-//         }
-//     } else {
-//         alert('Please add a minimum amount');
-//         return;
-//     }
-// })
-
 document.getElementById('donate2').addEventListener('click', function (event) {
     event.preventDefault();
 
@@ -106,9 +92,9 @@ document.getElementById('donate2').addEventListener('click', function (event) {
 
         const reservedAmount = getDonateBalance("reserved-amount")
 
-        if (donatedBalance2 <= reservedAmount) {
+        if (donateInput2 <= reservedAmount) {
             document.getElementById('balance2').innerText = donatedBalance2;
-            const reservedTotalAmount = reservedAmount - donatedBalance2;
+            const reservedTotalAmount = reservedAmount - donateInput2;
             document.getElementById('reserved-amount').innerText = reservedTotalAmount;
 
             modal.showModal();
@@ -117,13 +103,13 @@ document.getElementById('donate2').addEventListener('click', function (event) {
             });
         }
         else {
-            alert('Please add a limited amount')
+            alert('Invalid donate amount')
             return;
         }
 
 
     } else {
-        alert('Please add a minimum amount');
+        alert('Please add a valid amount');
         return;
     }
 })
@@ -145,27 +131,29 @@ document.getElementById('donate3').addEventListener('click', function (event) {
         const donatedBalance3 = balance3 + donateInput3;
 
         const reservedAmount = getDonateBalance("reserved-amount")
-        const reservedTotalAmount = reservedAmount - donatedBalance3;
+       
 
-        if (donatedBalance3 < reservedAmount) {
+        if (donateInput3 <= reservedAmount) {
             document.getElementById('balance3').innerText = donatedBalance3;
-           
+            const reservedTotalAmount = reservedAmount - donateInput3;
             document.getElementById('reserved-amount').innerText = reservedTotalAmount;
-
             modal.showModal();
             closeBtn.addEventListener('click', function () {
                 modal.close();
             });
         }
         else {
-            alert('Please add a limited amount')
+            alert('Invalid donate amount')
             return;
         }
 
 
     } else {
-        alert('Please add a minimum amount');
+        alert('Please add a valid amount');
         return;
     }
 })
 // donate3 function end
+
+
+
