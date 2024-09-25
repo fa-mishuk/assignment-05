@@ -24,7 +24,7 @@ function showColorById(id) {
     document.getElementById('history-btn').classList.remove('bg-[#B4F461]');
     document.getElementById('history-btn').classList.add('btn');
     document.getElementById('donate-card').classList.remove('hidden')
-    
+
 
     return;
 }
@@ -36,5 +36,20 @@ function showColorByIdd(id) {
     document.getElementById('donate-btn').classList.add('btn');
     document.getElementById('donate-card').classList.add('hidden')
 
+    return;
+}
+
+function showHistoryContainer() {
+    document.getElementById('history-btn').addEventListener('click', function () {
+        document.getElementById("history-container").classList.remove("hidden");
+        document.getElementById("doante-btn").classList.add("hidden")
+    })
+    return;
+}
+function hideHistoryContainer() {
+    document.getElementById('donate-btn').addEventListener('click', function () {
+        document.getElementById("history-container").classList.add("hidden");
+        document.getElementById("doante-btn").classList.add("hidden")
+    })
     return;
 }

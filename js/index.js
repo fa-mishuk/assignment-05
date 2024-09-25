@@ -4,16 +4,16 @@ document.getElementById("donate-btn").addEventListener('click', function (event)
     showColorById("donate-btn")
     showColorById("history-btn")
     showColorById("donate-card")
+
 })
 
 
-document.getElementById("history-btn").addEventListener('click', function () {
+document.getElementById("history-btn").addEventListener('click', function (event) {
+    event.preventDefault();
 
     showColorByIdd("history-btn")
     showColorByIdd("donate-btn")
     showColorByIdd("donate-card")
-
-    document.getElementById("history-container").classList.remove('hidden')
 })
 
 
@@ -21,7 +21,6 @@ document.getElementById("logo-btn").addEventListener('click', function (e) {
     e.preventDefault()
     window.location.href = 'home.html'
 })
-
 
 window.addEventListener('scroll', function () {
     const navBanner = document.getElementById('nav-banner');
@@ -33,8 +32,6 @@ window.addEventListener('scroll', function () {
         document.getElementById('nav-section').classList.add('bg-[#F9F7F3FF]');
     }
 });
-
-
 
 // donate1 function start
 document.getElementById('donate1').addEventListener('click', function (event) {
@@ -64,17 +61,18 @@ document.getElementById('donate1').addEventListener('click', function (event) {
                 modal.close();
             });
 
-            // ----------------
-            const div = document.createElement('div')
+            const div = document.createElement("div");
             div.innerHTML = `
-            <div class="grid gap-4 p-8 border mx-7 md:mx-24 lg:mx-24 rounded-xl mb-5">
-                <p class="font-bold lg:text-xl"><span>${donateInput1} Taka is </span>${donateP1}</p>
-                <p class="text-[#111111B3] text-sm lg:text-[16px]">Date : ${new Date().toLocaleDateString()} ${new Date().toTimeString()} (Bangladesh
-                Standard Time)</p>
-            </div>`;
-           
-            document.getElementById("history-container").appendChild(div)
-            // ----------------
+                <div class="grid gap-4 p-8 border mx-7 md:mx-24 lg:mx-24 rounded-xl mb-5">
+                    <p class="font-bold lg:text-xl"><span>${donateInput1} Taka is </span>${donateP1}</p>
+                    <p class="text-[#111111B3] text-sm lg:text-[16px]">Date : ${new Date().toLocaleDateString()} ${new Date().toTimeString()} (Bangladesh
+                    Standard Time)</p>
+                </div>`;
+
+            document.getElementById("history-container").appendChild(div);
+            
+            showHistoryContainer();
+            hideHistoryContainer();
         }
         else {
             alert('Invalid donate amount')
@@ -115,19 +113,21 @@ document.getElementById('donate2').addEventListener('click', function (event) {
             modal.showModal();
             closeBtn.addEventListener('click', function () {
                 modal.close();
-
-                // ----------------
-            const div = document.createElement('div')
-            div.innerHTML = `
-            <div class="grid gap-4 p-8 border mx-7 md:mx-24 lg:mx-24 rounded-xl mb-5">
-                <p class="font-bold lg:text-xl"><span>${donateInput2} Taka is </span>${donateP2}</p>
-                <p class="text-[#111111B3] text-sm lg:text-[16px]">Date : ${new Date().toLocaleDateString()} ${new Date().toTimeString()} (Bangladesh
-                Standard Time)</p>
-            </div>`;
-           
-            document.getElementById("history-container").appendChild(div)
-            // ----------------
             });
+
+
+            const div = document.createElement("div");
+            div.innerHTML = `
+                <div class="grid gap-4 p-8 border mx-7 md:mx-24 lg:mx-24 rounded-xl mb-5">
+                    <p class="font-bold lg:text-xl"><span>${donateInput2} Taka is </span>${donateP2}</p>
+                    <p class="text-[#111111B3] text-sm lg:text-[16px]">Date : ${new Date().toLocaleDateString()} ${new Date().toTimeString()} (Bangladesh
+                    Standard Time)</p>
+                </div>`;
+
+            document.getElementById("history-container").appendChild(div);
+
+            showHistoryContainer();
+            hideHistoryContainer();
         }
         else {
             alert('Invalid donate amount')
@@ -168,19 +168,20 @@ document.getElementById('donate3').addEventListener('click', function (event) {
             modal.showModal();
             closeBtn.addEventListener('click', function () {
                 modal.close();
-
-                // ----------------
-            const div = document.createElement('div')
-            div.innerHTML = `
-            <div class="grid gap-4 p-8 border mx-7 md:mx-24 lg:mx-24 rounded-xl mb-5">
-                <p class="font-bold lg:text-xl"><span>${donateInput3} Taka is </span>${donateP3}</p>
-                <p class="text-[#111111B3] text-sm lg:text-[16px]">Date : ${new Date().toLocaleDateString()} ${new Date().toTimeString()} (Bangladesh
-                Standard Time)</p>
-            </div>`;
-           
-            document.getElementById("history-container").appendChild(div)
-            // ----------------
             });
+
+            const div = document.createElement("div");
+            div.innerHTML = `
+                <div class="grid gap-4 p-8 border mx-7 md:mx-24 lg:mx-24 rounded-xl mb-5">
+                    <p class="font-bold lg:text-xl"><span>${donateInput3} Taka is </span>${donateP3}</p>
+                    <p class="text-[#111111B3] text-sm lg:text-[16px]">Date : ${new Date().toLocaleDateString()} ${new Date().toTimeString()} (Bangladesh
+                    Standard Time)</p>
+                </div>`;
+
+            document.getElementById("history-container").appendChild(div);
+
+            showHistoryContainer();
+            hideHistoryContainer();
         }
         else {
             alert('Invalid donate amount')
@@ -193,7 +194,3 @@ document.getElementById('donate3').addEventListener('click', function (event) {
         return;
     }
 })
-// donate3 function end
-
-
-
