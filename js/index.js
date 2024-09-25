@@ -65,8 +65,7 @@ document.getElementById('donate1').addEventListener('click', function (event) {
             div.innerHTML = `
                 <div class="grid gap-4 p-8 border mx-7 md:mx-24 lg:mx-24 rounded-xl mb-5">
                     <p class="font-bold lg:text-xl"><span>${donateInput1} Taka is </span>${donateP1}</p>
-                    <p class="text-[#111111B3] text-sm lg:text-[16px]">Date : ${new Date().toLocaleDateString()} ${new Date().toTimeString()} (Bangladesh
-                    Standard Time)</p>
+                    <p class="text-[#111111B3] text-sm lg:text-[16px]">Date : ${new Date().toLocaleDateString()} ${new Date().toTimeString()}</p>
                 </div>`;
 
             document.getElementById("history-container").appendChild(div);
@@ -120,8 +119,7 @@ document.getElementById('donate2').addEventListener('click', function (event) {
             div.innerHTML = `
                 <div class="grid gap-4 p-8 border mx-7 md:mx-24 lg:mx-24 rounded-xl mb-5">
                     <p class="font-bold lg:text-xl"><span>${donateInput2} Taka is </span>${donateP2}</p>
-                    <p class="text-[#111111B3] text-sm lg:text-[16px]">Date : ${new Date().toLocaleDateString()} ${new Date().toTimeString()} (Bangladesh
-                    Standard Time)</p>
+                    <p class="text-[#111111B3] text-sm lg:text-[16px]">Date : ${new Date().toLocaleDateString()} ${new Date().toTimeString()}</p>
                 </div>`;
 
             document.getElementById("history-container").appendChild(div);
@@ -174,8 +172,7 @@ document.getElementById('donate3').addEventListener('click', function (event) {
             div.innerHTML = `
                 <div class="grid gap-4 p-8 border mx-7 md:mx-24 lg:mx-24 rounded-xl mb-5">
                     <p class="font-bold lg:text-xl"><span>${donateInput3} Taka is </span>${donateP3}</p>
-                    <p class="text-[#111111B3] text-sm lg:text-[16px]">Date : ${new Date().toLocaleDateString()} ${new Date().toTimeString()} (Bangladesh
-                    Standard Time)</p>
+                    <p class="text-[#111111B3] text-sm lg:text-[16px]">Date : ${new Date().toLocaleDateString()} ${new Date().toTimeString()}</p>
                 </div>`;
 
             document.getElementById("history-container").appendChild(div);
